@@ -1,13 +1,13 @@
 import { SignupFormComponent } from './signup-form/signup-form.component';
-import { BookService } from './book/book.service';
-import { CourseComponent } from './course/course.component';
+//import { BookService } from './book/book.service';
+//import { CourseComponent } from './course/course.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
+//import { BookComponent } from './book/book.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PanelComponent } from './panel/panel.component';
 import { InputFormatDirective } from './input-format.directive';
@@ -36,8 +36,10 @@ import { AuthGuardService } from './auth-guard.service';
 @NgModule({
   declarations: [
     AppComponent,
-    CourseComponent,
-    BookComponent,
+
+
+    //CourseComponent,
+   // BookComponent,
     PanelComponent,
     InputFormatDirective,
     ContactFormComponent,
@@ -74,7 +76,8 @@ import { AuthGuardService } from './auth-guard.service';
       ]
     )
   ],
-  providers: [BookService,
+  providers: [
+    //BookService,
     PostService,
     GithubFollowersService,
     AuthService,

@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 import { map } from "rxjs/operators"; 
 import  {JwtHelper, tokenNotExpired} from 'angular2-jwt';
 @Injectable()
-export class AuthService {
+export  class AuthService {
   constructor(private http: Http) {
   }
 
