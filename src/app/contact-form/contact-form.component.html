@@ -1,0 +1,24 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+   <div ngModelGroup>
+  <div class="form-group">
+   
+    <label for="fName">First Name</label>
+    <input required maxlength="4" ngModel name="fName" type="text" id="fName" #fName="ngModel" (change)="log(fName)" class="form-control">
+    <!--<div class="alert alert-danger" *ngIf="fName.touched && !(fName.valid)">please enter name</div>
+    <div class="alert alert-danger" *ngIf="fName.errors.maxlength">max length error</div>-->
+    <div class="checkbox">
+      <label><input type="checkbox" ngModel name="isselected">select me</label>
+    </div>
+    <div class="form-group">
+      <label for="contactType">Contact Type </label>
+      <select class="form-control" ngModel name="contactType">
+      <option *ngFor="let contact of contactType" [ngValue]="contact">{{contact.name}}</option></select>
+      </div>
+    <p>{{f.value | json}}</p>
+  </div>
+  <div class="form-group">
+<label for="comment">Comments</label>
+<textarea id="comment" class="form-control"></textarea>
+<button id="submit" class="btn btn-primary">submit</button>
+  </div></div>
+</form>
